@@ -8,6 +8,7 @@ use common\models\User;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use Yii;
 
 /**
  * ArticlesController implements the CRUD actions for Articles model.
@@ -69,6 +70,7 @@ class ArticlesController extends Controller
     public function actionCreate()
     {
         $model = new Articles();
+        $model->created_by = Yii::$app->user->id;
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
