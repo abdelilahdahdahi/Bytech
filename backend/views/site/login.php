@@ -6,6 +6,7 @@
 
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
+use yii\helpers\Url;
 
 $this->title = 'Login';
 ?>
@@ -46,7 +47,7 @@ $this->title = 'Login';
 
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="small" href="<?php echo Url::to(['site/forgot-password'])?>">Forgot Password?</a>
                 </div>
                 <div class="text-center">
                     <a class="small" href="register.html">Create an Account!</a>
