@@ -16,8 +16,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'created_by')->textInput() ?>
-
     <?= $form->field($model, 'category_id')->textInput() ?>
 
     <div class="form-group">
