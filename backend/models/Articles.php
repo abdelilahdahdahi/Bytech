@@ -54,10 +54,10 @@ class Articles extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
             'content' => 'Content',
-            'created_by' => 'Created By',
-            'category_id' => 'Category ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_by' => 'Author',
+            'category_id' => 'Category',
+            'created_at' => 'Created at',
+            'updated_at' => 'Last update',
         ];
     }
 
