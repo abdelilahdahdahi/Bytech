@@ -9,7 +9,7 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
-use Yii;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -76,7 +76,6 @@ AppAsset::register($this);
                     </div>
                 </div>
             </li>
-
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -127,10 +126,12 @@ AppAsset::register($this);
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="<?php echo Url::to(['articles/create']) ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Create articles</span>
+                </a>
             </li>
+
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -359,7 +360,7 @@ AppAsset::register($this);
                     <?php echo $content ?>
                 </div>
                 <!-- Begin Page Content -->
-              
+
                 <!-- /.container-fluid -->
 
             </div>
